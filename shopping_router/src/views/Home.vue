@@ -34,6 +34,11 @@ const goToDetail = (id)=>{
 router.push(`/product/${id}`)
 
 }
+const formatPrice = (price)=>{
+// return console.log(price);
+return `₩${price.toLocaleString()}`
+
+}
 </script>
 
 <template>
@@ -46,7 +51,9 @@ router.push(`/product/${id}`)
           :src="product.image"
           :alt="product.name" />
         <p>상품명 : {{ product.name }}</p>
-        <p>금액 : {{ product.price }}</p>
+        <p>금액 : {{ formatPrice(product.price) }}</p>
+        
+         
       </div>
     </div>
   </div>
