@@ -1,4 +1,5 @@
 <script setup>
+import Tab from "@/components/Tab.vue";
 import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 // route는 정보를 가져옴 (params, query, path, name)
@@ -166,6 +167,7 @@ const comfirmBtn = ()=>{
         </div>
       </div>
     </div>
+    <Tab/>
   </div>
 </template>
 
